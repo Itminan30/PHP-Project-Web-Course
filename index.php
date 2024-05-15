@@ -15,7 +15,7 @@ require __DIR__ . "/includes/common/navbar.php";
     <div class="carousel">
       <!--Slide 1-->
       <div id="slide1" class="carousel-item relative w-full">
-        <img src="images/buriganga1.jpeg" class="w-full " />
+        <img src="images/buriganga1.jpeg" class="w-full object-cover" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" class="btn btn-circle">❮</a>
           <a href="#slide2" class="btn btn-circle">❯</a>
@@ -23,7 +23,7 @@ require __DIR__ . "/includes/common/navbar.php";
       </div>
       <!--slide 2-->
       <div id="slide2" class="carousel-item relative w-full">
-        <img src="images/carousal-pic2.jpeg" class="w-full" />
+        <img src="images/carousal-pic2.jpeg" class="w-full object-cover" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" class="btn btn-circle">❮</a>
           <a href="#slide3" class="btn btn-circle">❯</a>
@@ -31,7 +31,7 @@ require __DIR__ . "/includes/common/navbar.php";
       </div>
       <!-- slide 3-->
       <div id="slide3" class="carousel-item relative w-full">
-        <img src="images/carousal-pc-3.jpeg" class="w-full" />
+        <img src="images/carousal-pc-3.jpeg" class="w-full object-cover" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide2" class="btn btn-circle">❮</a>
           <a href="#slide4" class="btn btn-circle">❯</a>
@@ -39,7 +39,7 @@ require __DIR__ . "/includes/common/navbar.php";
       </div>
       <!-- slide 4-->
       <div id="slide4" class="carousel-item relative w-full">
-        <img src="images/carousal-pic4.jpg" class="w-full" />
+        <img src="images/carousal-pic4.jpg" class="w-full object-cover" />
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" class="btn btn-circle">❮</a>
           <a href="#slide1" class="btn btn-circle">❯</a>
@@ -89,9 +89,9 @@ require __DIR__ . "/includes/common/navbar.php";
             <img src="images/hotel_booking.jpg" alt="Shoes" class="rounded-xl" />
           </figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Hotel Booking</h2>
+            <h2 class="card-title">Tour Packages</h2>
             <div class="card-actions">
-              <button class="btn btn-primary">Details</button>
+              <button class="btn btn-primary"><a href="./tourPackage.php">Details</a></button>
             </div>
           </div>
         </div>
