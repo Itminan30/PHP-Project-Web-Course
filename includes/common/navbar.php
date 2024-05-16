@@ -30,7 +30,7 @@
 
     <div class="header-nav-buttons">
             <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./index.php">Home</a>
-            <a class="roboto-medium" href=" ">Hotels</a>
+            <a class="roboto-medium" href="./tourPackage.php">Packages</a>
             <a class="roboto-medium" href="./blogPage.php">Blog</a>
             <a class="roboto-medium" href=" ">About</a>
             <a class="roboto-medium" href="./contact.php">Contact</a>

@@ -26,10 +26,10 @@ require __DIR__ . "/includes/common/navbar.php";
                     </div>
                     <p class="py-4">
                     <ul class="steps">
-                        <li class="step step-primary">Ramna Park</li>
-                        <li class="step step-primary">Gulshan Lake Park</li>
-                        <li class="step">Chandrima Udyan</li>
-                        <li class="step">Sohrawardy Udyan</li>
+                        <li class="step step-primary">Chandrima Udyan</li>
+                        <li class="step step-primary">Sohrawardy Udyan</li>
+                        <li class="step">Museum of Independence</li>
+                        <li class="step">Ramna Park</li>
                         <li class="step">Sadarghat River Port</li>
                     </ul>
                     </p>
@@ -97,7 +97,6 @@ require __DIR__ . "/includes/common/navbar.php";
                         <li class="step step-primary">National Botanical Garden</li>
                         <li class="step step-primary">Bangladesh National Zoo</li>
                         <li class="step">Bangladesh National Museum</li>
-                        <li class="step">National Mosque</li>
                     </ul>
                     </p>
                     <div class="modal-action">
@@ -151,10 +150,10 @@ require __DIR__ . "/includes/common/navbar.php";
             <figure><img src="images/botanical.jpeg" alt="Shoes" /></figure>
             <!--modal-->
             <!-- Open the modal using ID.showModal() method -->
-            <button class="btn" onclick="my_modal_5.showModal()">No Name</button>
+            <button class="btn" onclick="my_modal_5.showModal()">Fun Fair</button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
-                    <h3 class="font-bold text-lg">No Name</h3> <br>
+                    <h3 class="font-bold text-lg">Fun Fair</h3> <br>
                     <div class="flex gap-4">
                         <img style="height: 220px; width: 150px;" src="images/ju.jpeg" alt="">
                         <img style="height: 220px; width: 150px;" src="images/JU 2.jpeg" alt="">
