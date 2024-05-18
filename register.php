@@ -2,14 +2,69 @@
 require_once __DIR__ . "/includes/config_session.inc.php";
 require_once __DIR__ . "/includes/register_mvc/register_view.inc.php";
 ?>
+<!-- Session File End -->
 
+<!-- Head of HTML Document -->
 <?php
-require __DIR__ . "/common/header.php";
+$title = "Register";
+require "common/head.php";
 ?>
+<!--  -->
 
+<!-- Header Section Start -->
 <?php
-require __DIR__ . "/common/navbar.php";
+require "common/header.php";
 ?>
+<!-- Header Section End -->
+
+<!-- Nav Section Start -->
+<nav>
+    <div class="header-nav">
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="metal-mania-regular" href=" ">Gulliver's Travels</a>
+            </div>
+        </div>
+        <div class="header-nav-buttons">
+            <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./index.php">Home</a>
+            <a class="roboto-medium" href="./tourPackage.php">Packages</a>
+            <a class="roboto-medium" href="./blogPage.php">Blog</a>
+            <a class="roboto-medium" href=" ">About</a>
+            <a class="roboto-medium" href="./contact.php">Contact</a>
+            <?php if (isset($_SESSION["user_email"])) : ?>
+                <!-- Profile Picture -->
+                <div class="dropdown dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="<?php echo $_SESSION["user_username"] ?>" src="<?php if (isset($_SESSION["user_photo"])) echo $_SESSION["user_photo"] ?>" />
+                        </div>
+                    </div>
+                    <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a>
+                                <?php if (isset($_SESSION["user_email"])) echo $_SESSION["user_email"] ?>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./includes/logout.inc.php">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            <?php else : ?>
+                <a class="roboto-medium" href="./register.php">Register</a>
+                <a class="roboto-medium" href="./login.php">Login</a>
+            <?php endif; ?>
+        </div>
+    </div>
+</nav>
+<!-- Nav Section End -->
+
+<!-- Main Section Start -->
 <main>
     <div class="w-fit border border-gray-400-200 rounded-md p-10 mx-auto my-10">
         <p class="text-2xl font-semibold border-b-2 border-t-2 text-center p-2 my-2">
@@ -74,23 +129,33 @@ require __DIR__ . "/common/navbar.php";
                     <input type="file" name="photo" id="photo" accept="image/*" placeholder="Photo" class="file-input file-input-bordered w-full max-w-xs">
                 </label>
             </div>
+
+            <!-- Utility Start -->
             <div class="text-sm">
                 Already Have an Account? <span class="text-red-400 font-semibold"><a href="./login.php">Login</a></span>
             </div>
+            <!-- Utility End -->
+
+            <!-- Register Error Start -->
+            <div>
+                <?php
+                check_register_errors();
+                ?>
+            </div>
+            <!-- Register Error End -->
+
             <!-- Submit Button -->
             <div class="border-sky-200 flex justify-start">
                 <button type="submit" class="btn btn-outline">Create Account</button>
             </div>
         </form>
     </div>
-    <div>
-        <?php
-        check_register_errors();
-        ?>
-    </div>
 </main>
+<!-- Main Section End -->
 
-<!--Footer Part-->
+<!-- Footer Section Start -->
 <?php
-require __DIR__ . "/common/footer.php";
+$CSSPath = "./css/style.css";
+require "common/footer.php";
 ?>
+<!-- Footer Section End -->
