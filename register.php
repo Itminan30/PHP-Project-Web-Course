@@ -4,11 +4,11 @@ require_once __DIR__ . "/includes/register_mvc/register_view.inc.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/header.php";
+require __DIR__ . "/common/header.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/navbar.php";
+require __DIR__ . "/common/navbar.php";
 ?>
 <main>
     <div class="w-fit border border-gray-400-200 rounded-md p-10 mx-auto my-10">
@@ -92,5 +92,5 @@ require __DIR__ . "/includes/common/navbar.php";
 
 <!--Footer Part-->
 <?php
-require __DIR__ . "/includes/common/footer.php";
+require __DIR__ . "/common/footer.php";
 ?>

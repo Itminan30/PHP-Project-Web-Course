@@ -1,9 +1,9 @@
 <?php
-require __DIR__ . "/includes/common/header.php";
+require __DIR__ . "/common/header.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/navbar.php";
+require __DIR__ . "/common/navbar.php";
 ?>
 <!--main body starts from here-->
 <main>
@@ -74,7 +74,7 @@ require __DIR__ . "/includes/common/navbar.php";
           <p>Lalbagh rd, dhaka -1211
           </p>
           <div class="card-actions">
-            <a style="margin: auto;" href="places/lalbaghFort.html"><button class="btn  m-auto">Explore</button></a>
+            <a style="margin: auto;" href="./places/lalbaghFort.php"><button class="btn  m-auto">Explore</button></a>
           </div>
         </div>
       </div>
@@ -169,5 +169,5 @@ require __DIR__ . "/includes/common/navbar.php";
 
 <!--Footer Part-->
 <?php
-require __DIR__ . "/includes/common/footer.php";
+require __DIR__ . "/common/footer.php";
 ?>

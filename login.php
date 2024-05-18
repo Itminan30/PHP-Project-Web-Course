@@ -4,11 +4,11 @@ require_once __DIR__ . "/includes/login_mvc/login_view.inc.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/header.php";
+require __DIR__ . "/common/header.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/navbar.php";
+require __DIR__ . "/common/navbar.php";
 ?>
 
 <main>
@@ -53,5 +53,5 @@ require __DIR__ . "/includes/common/navbar.php";
 
 <!--Footer Part-->
 <?php
-require __DIR__ . "/includes/common/footer.php";
+require __DIR__ . "/common/footer.php";
 ?>

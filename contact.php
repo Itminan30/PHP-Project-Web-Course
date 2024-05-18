@@ -1,9 +1,9 @@
 <?php
-require __DIR__ . "/includes/common/header.php";
+require __DIR__ . "/common/header.php";
 ?>
 
 <?php
-require __DIR__ . "/includes/common/navbar.php";
+require __DIR__ . "/common/navbar.php";
 ?>
 
 
@@ -42,15 +42,7 @@ require __DIR__ . "/includes/common/navbar.php";
 
 </main>
 
-
-
-
-
-
-
-
-
 <!--Footer Part-->
 <?php
-require __DIR__ . "/includes/common/footer.php";
+require __DIR__ . "/common/footer.php";
 ?>
