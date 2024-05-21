@@ -33,7 +33,6 @@ require __DIR__ . "/common/navbar.php";
           <li><a>Lalbagh Fort</a></li>
           <li><a>Ahfan Manjil</a></li>
           <li><a>Baitul Mukarram Mosque</a></li>
-
         </ul>
       </div>
     </div>

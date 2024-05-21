@@ -27,7 +27,7 @@ require "common/header.php";
             </div>
         </div>
         <div class="header-nav-buttons">
-            <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./index.php">Home</a>
+            <a class="roboto-medium" href="./index.php">Home</a>
             <a class="roboto-medium" href="./tourPackage.php">Packages</a>
             <a class="roboto-medium" href="./blogPage.php">Blog</a>
             <a class="roboto-medium" href=" ">About</a>
@@ -58,7 +58,7 @@ require "common/header.php";
                 </div>
             <?php else : ?>
                 <a class="roboto-medium" href="./register.php">Register</a>
-                <a class="roboto-medium" href="./login.php">Login</a>
+                <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./login.php">Login</a>
             <?php endif; ?>
         </div>
     </div>
