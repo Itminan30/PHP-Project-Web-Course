@@ -6,7 +6,7 @@ require_once __DIR__ . "/includes/config_session.inc.php";
 
 <!-- Head of HTML Document -->
 <?php
-$title = "Home";
+$title = "Contact";
 require "common/head.php";
 ?>
 <!--  -->
