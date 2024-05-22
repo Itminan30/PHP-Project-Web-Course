@@ -12,6 +12,6 @@ function check_write_errors() {
         }
         else if(isset($_GET["blog"]) && $_GET["blog"] === "success") {
             echo "<br>";
-            echo "<p>Signup Success!!!</p>";
+            echo "<p>Blog Added Successfully!!!</p>";
         }
     }
