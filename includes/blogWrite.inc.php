@@ -106,8 +106,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             //     "dob" => $dob
             // ];
 
-            // header("Location: ../blogWrite.php");
-            // die();
+            header("Location: ../blogWrite.php");
+            die();
         }
 
         // No Error Zone

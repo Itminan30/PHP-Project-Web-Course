@@ -1,9 +1,12 @@
 <?php
 // Session Start
 require_once "includes/config_session.inc.php";
+// view Start
+require_once "includes/blogWrite_mvc/blogWrite_view.inc.php";
 // Check if user is logged in
-function checkLogin($email){
-    if(!isset($email)){
+function checkLogin($email)
+{
+    if (!isset($email)) {
         $_SESSION["flash_message"] = "User Must Be Logged In To Write a Blog";
         header("Location: ./login.php");
         die();
@@ -77,6 +80,9 @@ require "common/header.php";
         <div class="mx-auto text-center bg-slate-800 text-white mb-10 py-10">
             <h2 class="russo-one-regular">Write a Blog</h2>
             <p>Share your thought about a place at the capital of Bangladesh!</p>
+            <?php
+            check_write_errors();
+            ?>
         </div>
     </div>
 
