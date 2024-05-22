@@ -34,7 +34,9 @@ require "includes/myBlogs.inc.php"
                     <h2 class="blog-card-title"><?php echo $blog["BLOG_TITLE"] ?></h2>
                     <p><?php echo $blog["PLACE_NAME"] ?></p>
                     <div class="card-actions justify-end">
-                        <button class="btn  m-auto">Explore</button>
+                        <button class="btn  m-auto">
+                            <a href="<?php echo "./blog.php?blogID={$blog['BLOG_ID']}" ?>">Explore</a>
+                        </button>
                     </div>
                 </div>
             </div>

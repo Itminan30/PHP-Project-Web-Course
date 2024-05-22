@@ -1,14 +1,27 @@
+<!-- Session File Start -->
 <?php
-require __DIR__ . "/common/header.php";
+require_once __DIR__ . "/includes/config_session.inc.php";
 ?>
+<!-- Session File End -->
 
+<!-- Head of HTML Document -->
 <?php
-require __DIR__ . "/common/navbar.php";
+$title = "Tour Packages";
+require "common/head.php";
 ?>
+<!--  -->
 
+<!-- Header Section Start -->
+<?php
+require "common/header.php";
+?>
+<!-- Header Section End -->
+
+<!-- Nav Section Start -->
+<?php require "common/navbar.php" ?>
+<!-- Nav Section End -->
 
 <main>
-
     <div class="top-destinations-cards py-10">
         <!--card 1-->
         <div class="card w-96 bg-base-100 shadow-xl">
@@ -261,8 +274,9 @@ require __DIR__ . "/common/navbar.php";
 
 </main>
 
-
-<!--Footer Part-->
+<!-- Footer Section Start -->
 <?php
-require __DIR__ . "/common/footer.php";
+$CSSPath = "./css/style.css";
+require "common/footer.php";
 ?>
+<!-- Footer Section End -->
