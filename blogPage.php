@@ -26,7 +26,7 @@ require "common/header.php";
       </div>
     </div>
     <div class="header-nav-buttons">
-      <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./index.php">Home</a>
+      <a class="roboto-medium" href="./index.php">Home</a>
       <a class="roboto-medium" href="./tourPackage.php">Packages</a>
       <a class="roboto-medium" style="color: rgb(207, 24, 24);" href="./blogPage.php">Blog</a>
       <a class="roboto-medium" href=" ">About</a>
@@ -73,7 +73,11 @@ require "common/header.php";
       <div class="max-w-md">
         <h1 class="mb-5 text-5xl font-bold text-white">BLOG</h1>
         <p class="mb-5  text-white">Recent Travel blog posts</p>
-        <button style="border: 1px solid #ea1313; border-radius: 4px; padding: 5px 10px; background-color: #e65d5d; font-weight: bold;">Write Blog</button>
+        <button style="border: 1px solid #ea1313; border-radius: 4px; padding: 5px 10px; background-color: #e65d5d; font-weight: bold;">
+          <a href="blogWrite.php">
+            Write Blog
+          </a>
+        </button>
       </div>
     </div>
   </div>

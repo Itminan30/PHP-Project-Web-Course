@@ -105,6 +105,12 @@ require "common/header.php";
                 <?php
                 show_login_errors()
                 ?>
+                <?php
+                if(isset($_SESSION["flash_message"])){
+                    echo $_SESSION["flash_message"];
+                    unset($_SESSION["flash_message"]);
+                }
+                ?>
             </div>
             <!-- Error Div End -->
 
