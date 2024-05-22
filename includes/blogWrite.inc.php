@@ -94,7 +94,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // 
         if ($errors) {
-            $_SESSION["register_error"] = $errors;
+            $_SESSION["write_error"] = $errors;
+            farr($errors);
 
             // Keep Form Data if Error // Will be implemented Later
             // $registerData = [
@@ -105,8 +106,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             //     "dob" => $dob
             // ];
 
-            header("Location: ../blogWrite.php");
-            die();
+            // header("Location: ../blogWrite.php");
+            // die();
         }
 
         // No Error Zone

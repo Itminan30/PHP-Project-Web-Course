@@ -93,11 +93,11 @@ require "common/header.php";
             <label for="location">Map Location</label>
             <input type="text" id="location" name="location" placeholder="Google Map Location of the place" required>
             <!-- Place Image -->
-            <label for="image">Photo Of the Place</label>
-            <input type="file" name="image" id="image">
+            <label for="photo">Photo Of the Place</label>
+            <input type="file" name="photo" id="photo">
             <!-- Blog body -->
             <label for="body">Write your Blog: </label>
-            <textarea name="comments" rows="20" placeholder="Write Here"></textarea><br>
+            <textarea name="body" rows="20" placeholder="Write Here"></textarea><br>
             <!-- Submit Button -->
             <input class="contact-submit" type="submit" value="Submit">
         </form>
