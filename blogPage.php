@@ -21,6 +21,10 @@ require "common/header.php";
 <?php require "common/navbar.php" ?>
 <!-- Nav Section End -->
 
+<!-- Require blogPage.inc.php -->
+<?php require "includes/blogPage.inc.php" ?>
+<!--  -->
+
 <!-- Main Start -->
 <main>
   <!--hero part-->
@@ -41,146 +45,22 @@ require "common/header.php";
 
 
   <div class="whole_blog_cards">
-    <div class="blog-items">
-      <h3 style="text-align: center; font-weight: bold;margin-top: 37px; margin-left: 700px;">BLOG POSTS</h3>
-      <div class="dropdown dropdown-end mt-8 mr-4">
-        <div tabindex="0" role="button" class="btn m-1 bg-red-500 text-white font-bold">Highlights</div>
-        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-yellow-100 rounded-box w-52">
-          <h2 style="font-weight: bold;">Places You Must Visit</h2>
-          <li><a>Jahangirnagar University</a></li>
-          <li><a>Dhaka University</a></li>
-          <li><a>Bangabandhu Military Museum</a></li>
-          <li><a>Lalbagh Fort</a></li>
-          <li><a>Ahfan Manjil</a></li>
-          <li><a>Baitul Mukarram Mosque</a></li>
-        </ul>
-      </div>
-    </div>
     <!--blog cards-->
-
-    <div class="blog_cards">
-
-      <!--first card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/mosque-1.jpg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Baitul Mukarram Mosque</h2>
-          <p>Topkhana Road, Dhaka</p>
-          <div class="card-actions justify-end">
-            <button class="btn  m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-
-      <!--second card-->
-      <div class="blog_card w-96 bg-base-100  ">
-        <figure><img style="height: 250px; width:400px ;" src="images/ahsan-manjil.jpg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Ahsan Manjil</h2>
-          <p>Old City Old Dhaka, Dhaka</p>
-          <div class="card-actions justify-end">
-            <button class="btn m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-      <!--third card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/lalbagh 2nd.jpeg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Lalbagh Fort</h2>
-          <p>Lalbagh rd, dhaka -1211
-          </p>
-          <div class="card-actions">
-            <a style="margin: auto;" href="./places/lalbaghFort.php"><button class="btn  m-auto">Explore</button></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="blog_cards">
-
-      <!--first card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/smrity1.jpg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">National Martyr's Monument</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions justify-end">
-            <button class="btn  m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-
-      <!--second card-->
-      <div class="blog_card w-96 bg-base-100  ">
-        <figure><img style="height: 250px; width:400px ;" src="images/shahid-minar1.jpg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Central Shaheed Minar</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions justify-end">
-            <button class="btn m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-      <!--third card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/botanical 2.jpeg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Botanical Garden</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions justify-end">
-            <button class="btn  m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <div class="blog_cards">
-
-      <!--first card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/du 1.jpeg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">University of Dhaka</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions">
-            <a style="margin: auto;" href="places/DU.html"><button class="btn m-auto">Explore</button></a>
-          </div>
-        </div>
-      </div>
-
-
-      <!--second card-->
-      <div class="blog_card w-96 bg-base-100  ">
-        <figure><img style="height: 250px; width:400px ;" src="images/buriganga1.jpeg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Buriganga Rever</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions justify-end">
-            <button class="btn m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
-
-      <!--third card-->
-      <div class="blog_card w-96 bg-base-100 ">
-        <figure><img style="height: 250px; width: 400px;" src="images/hatirjhil1.jpg" alt="Shoes" /></figure>
-        <div class="card-body text-center ">
-          <h2 class="blog-card-title">Hetir Jheel</h2>
-          <p>Discover meticulously curated exhibits that showcase a wide array of artifacts, weaponry, and interactive displays.</p>
-          <div class="card-actions justify-end">
-            <button class="btn  m-auto">Explore</button>
-          </div>
-        </div>
-      </div>
+    <div class="blogs grid grid-cols-3 my-20">
+        <?php foreach ($allBlogs as $blog) : ?>
+            <div class="blog_card w-96 bg-base-200 m-auto">
+                <figure><img style="height: 250px; width: 400px;" src="<?php echo $blog["MAIN_PHOTO_URL"]?>" alt="Shoes" /></figure>
+                <div class="card-body text-center ">
+                    <h2 class="blog-card-title"><?php echo $blog["BLOG_TITLE"] ?></h2>
+                    <p><?php echo $blog["PLACE_NAME"] ?></p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-warning mt-5 m-auto">
+                            <a href="<?php echo "./blog.php?blogID={$blog['BLOG_ID']}" ?>">Explore</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
   </div>
 </main>

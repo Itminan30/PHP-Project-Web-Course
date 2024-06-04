@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors["wrong_email"] = "No account exists with this email!!!";
         }
         if(!is_email_wrong($result) && is_password_wrong($password, $result["USER_PASSWORD"])){
-            $errors["incorrect_password"] = "Wrong Password Bitch!!!";
+            $errors["incorrect_password"] = "Wrong Password!!!";
         }
 
         require_once __DIR__ . "/config_session.inc.php";

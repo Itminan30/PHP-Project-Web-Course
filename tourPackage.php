@@ -39,8 +39,8 @@ require "common/header.php";
                     </div>
                     <p class="py-4">
                     <ul class="steps">
-                        <li class="step step-primary">Chandrima Udyan</li>
-                        <li class="step step-primary">Sohrawardy Udyan</li>
+                        <li class="step">Chandrima Udyan</li>
+                        <li class="step">Sohrawardy Udyan</li>
                         <li class="step">Museum of Independence</li>
                         <li class="step">Ramna Park</li>
                         <li class="step">Sadarghat River Port</li>
@@ -89,8 +89,8 @@ require "common/header.php";
                     <p class="py-4">
                     <ul class="steps">
                         <li class="step">Armenian Church</li>
-                        <li class="step step-primary">Tara Masjid</li>
-                        <li class="step step-primary">Dhakeshwari Tample</li>
+                        <li class="step">Tara Masjid</li>
+                        <li class="step">Dhakeshwari Tample</li>
                         <li class="step">National Mosque</li>
                     </ul>
                     <div class="mt-5">
@@ -135,8 +135,8 @@ require "common/header.php";
                     </div>
                     <p class="py-4">
                     <ul class="steps">
-                        <li class="step step-primary">National Botanical Garden</li>
-                        <li class="step step-primary">Bangladesh National Zoo</li>
+                        <li class="step">National Botanical Garden</li>
+                        <li class="step">Bangladesh National Zoo</li>
                         <li class="step">Bangladesh National Museum</li>
                     </ul>
                     <div class="mt-5">
@@ -183,8 +183,8 @@ require "common/header.php";
                     </div>
                     <p class="py-4">
                     <ul class="steps">
-                        <li class="step step-primary">Lal Bagh Kella</li>
-                        <li class="step step-primary">Ahsan Manjil</li>
+                        <li class="step">Lal Bagh Kella</li>
+                        <li class="step">Ahsan Manjil</li>
                         <li class="step">National War Museaum</li>
                     </ul>
                     <ul class="steps">
@@ -237,8 +237,8 @@ require "common/header.php";
                     </div>
                     <p class="py-4">
                     <ul class="steps">
-                        <li class="step step-primary">Military Museaum</li>
-                        <li class="step step-primary">Novo Theatre</li>
+                        <li class="step">Military Museaum</li>
+                        <li class="step">Novo Theatre</li>
                         <li class="step">3D Art Gallery</li>
                         <li class="step">Toggi Fun World</li>
                     </ul>
