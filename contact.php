@@ -43,9 +43,9 @@ require "common/header.php";
   <!--form-->
   <div class="contach-form">
     <form class="form" action="">
-      Name :
+      <label for="name">Name :</label>
       <input type="text" placeholder="Your name" required>
-      Email address :
+      <label for="email">Email address :</label>
       <input type="email" placeholder="Your Email" required>
       <textarea name="comments" rows="4" placeholder="Comment"></textarea><br>
       <input class="contact-submit" type="submit" value="Submit">

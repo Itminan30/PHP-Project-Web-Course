@@ -21,13 +21,85 @@ require "common/header.php";
 <?php require "common/navbar.php" ?>
 <!-- Nav Section End -->
 
+<!-- Include INC file -->
+<?php require "includes/tourPackage.inc.php" ?>
+<!-- Include Database -->
+<?php require_once  "includes/database/dbh.inc.php"; ?>
+
 <main>
     <div class="top-destinations-cards py-10">
+
+        <?php foreach ($allPackages as $package) : ?>
+            <?php $places = getPlaces($pdo, $package["PACKAGE_ID"]) ?>
+            <div>
+                <!-- <?php echo "<pre>" ?>
+                <?php print_r($package) ?>
+                <?php echo "</pre>" ?>
+                <?php echo "<pre>" ?> -->
+                <!-- <?php print_r($places) ?>
+                <?php echo "</pre>" ?> -->
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="<?php echo $package["PACKAGE_IMAGE"] ?>" alt="Shoes" /></figure>
+                <!--modal-->
+                <!-- Open the modal using ID.showModal() method -->
+                <button class="btn" onclick="<?php echo str_replace(' ', '', $package["PACKAGE_NAME"]) ?>.showModal()">
+                    <?php echo "{$package["PACKAGE_NAME"]}"; ?>
+                </button>
+                <dialog id="<?php echo str_replace(' ', '', $package["PACKAGE_NAME"]) ?>" class="modal">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg">
+                            <?php echo "{$package["PACKAGE_NAME"]} ({$package["TOUR_DURATION"]} days)"; ?>
+                        </h3>
+                        <br>
+                        <div class="flex gap-4">
+                            <img style="height: 220px; width: 150px;" src="images/lalbag.jpg" alt="">
+                            <img style="height: 220px; width: 150px;" src="images/lalbagh 2nd.jpeg" alt="">
+                            <img style="height: 220px; width: 150px;" src="images/ramna.jpg" alt="">
+                        </div>
+                        <div class="py-4">
+                            <ul class="steps">
+                                <?php foreach ($places as $place) : ?>
+                                    <li class="step">
+                                        <?php echo $place["PLACE_NAME"] ?>
+                                    </li>
+                                <?php endforeach ?>
+                            </ul>
+
+                            <div class="mt-5 ml-5">
+                                <p>
+                                    <span class="font-semibold">Transport Cost:</span> <?php echo $package["TRANSPORTATION_COST"] ?>TK
+                                </p>
+                                <p>
+                                    <span class="font-semibold">Stay Cost:</span> <?php echo $package["STAY_COST"] ?>TK
+                                </p>
+                                <p>
+                                    <span class="font-semibold">Food Cost:</span> <?php echo $package["FOOD_COST"] ?>TK
+                                </p>
+                                <p>
+                                    <span class="font-semibold">Total Cost:</span> <?php echo $package["TOTAL_COST"] ?>TK
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <a href="/places/lalbaghFort.html" style="color: rgb(248, 63, 63);font-weight: bold;">
+                                    <button class="btn">
+                                        Read more
+                                    </button>
+                                </a>
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        <?php endforeach ?>
+
         <!--card 1-->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure><img src="images/lalbag.jpg" alt="Shoes" /></figure>
-            <!--modal-->
-            <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_1.showModal()">Minimal Trip</button>
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box">
@@ -63,20 +135,17 @@ require "common/header.php";
                     </p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <a href="/places/lalbaghFort.html" style="color: rgb(248, 63, 63);font-weight: bold;">Read more</a>
                             <button class="btn">Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
-        </div>
+        </div> -->
 
         <!--card 2-->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure><img src="images/curzon hall.jpeg" alt="Shoes" /></figure>
-            <!--modal-->
-            <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_2.showModal()">Spiritual Spirit</button>
             <dialog id="my_modal_2" class="modal">
                 <div class="modal-box">
@@ -110,20 +179,17 @@ require "common/header.php";
                     </p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <a href="/places/DU.html" style="color: rgb(248, 63, 63);font-weight: bold;">Read more</a>
                             <button class="btn">Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
-        </div>
+        </div> -->
 
         <!--card 3-->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure><img src="images/botanical.jpeg" alt="Shoes" /></figure>
-            <!--modal-->
-            <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_3.showModal()">Sneak Peek</button>
             <dialog id="my_modal_3" class="modal">
                 <div class="modal-box">
@@ -159,19 +225,17 @@ require "common/header.php";
                     </p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <a href="/places/Botanical.html" style="color: rgb(248, 63, 63);font-weight: bold;">Read more</a>
                             <button class="btn">Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
-        </div>
+        </div> -->
+
         <!--card 4-->
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <!-- <div class="card w-96 bg-base-100 shadow-xl">
             <figure><img src="images/ju.jpeg" alt="Shoes" /></figure>
-            <!--modal-->
-            <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_4.showModal()">Tour of History</button>
             <dialog id="my_modal_4" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
@@ -212,20 +276,17 @@ require "common/header.php";
                     </p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <a href="/places/ju.html" style="color: rgb(248, 63, 63);font-weight: bold;">Read more</a>
                             <button class="btn">Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
-        </div>
+        </div> -->
 
         <!--card 5-->
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="images/botanical.jpeg" alt="Shoes" /></figure>
-            <!--modal-->
-            <!-- Open the modal using ID.showModal() method -->
+        <!-- <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="images/JU 2.jpeg" alt="Shoes" /></figure>
             <button class="btn" onclick="my_modal_5.showModal()">Fun Fair</button>
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
@@ -262,14 +323,13 @@ require "common/header.php";
                     </p>
                     <div class="modal-action">
                         <form method="dialog">
-                            <!-- if there is a button in form, it will close the modal -->
                             <a href="/places/ju.html" style="color: rgb(248, 63, 63);font-weight: bold;">Read more</a>
                             <button class="btn">Close</button>
                         </form>
                     </div>
                 </div>
             </dialog>
-        </div>
+        </div> -->
     </div>
 
 </main>

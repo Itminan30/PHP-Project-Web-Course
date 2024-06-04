@@ -67,10 +67,7 @@ require "common/header.php";
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit perferendis exercitationem, nulla alias suscipit eveniet porro quaerat amet molestiae repudiandae sunt minima nemo voluptate distinctio architecto corporis ipsa quibusdam quasi.
     </p>
-    <br><br>
-    <!--search-->
-    <input type="text" placeholder="Type here" class="input input-bordered input-error w-full max-w-xs" />
-    <button class="btn -mx-5 bg-red-600 text-white font-semibold">Search</button>
+    <br>
 
     <p class="roboto-medium mt-20" style="text-align: right;">
       Wide range of travel options <br>
