@@ -41,7 +41,9 @@ require "common/header.php";
                             </a>
                         </button>
                         <button class="btn btn-error text-white mt-5 m-auto">
-                            Deny
+                            <a href="<?php echo "./includes/approveBlogs_mvc/deny.inc.php?id={$blog['BLOG_ID']}"?>">
+                                Deny
+                            </a>
                         </button>
                     </div>
                 </div>
