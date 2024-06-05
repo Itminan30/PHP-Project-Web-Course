@@ -2,8 +2,7 @@
 function set_blog($pdo, $writerID, $title, $body, $place, $location, $url, $publicId)
 {
     $query = "INSERT INTO BLOGS (WRITER_ID, BLOG_TITLE, BLOG_BODY, PLACE_NAME, PLACE_LOCATION, MAIN_PHOTO_URL, MAIN_PHOTO_ID) VALUES (:writerID, :title, :body, :place, :location, :url, :publicId );";
-
-
+    
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":writerID", $writerID);
     $stmt->bindParam(":title", $title);

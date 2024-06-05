@@ -59,7 +59,7 @@ require "common/header.php";
             <!-- Utility End -->
 
             <!-- Error Div Start -->
-            <div>
+            <div class="text-pink-500">
                 <?php
                 show_login_errors()
                 ?>
