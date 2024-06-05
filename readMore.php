@@ -152,6 +152,11 @@ require "common/header.php";
                 <label for="person" class="text-xl font-semibold">Person Count: </label>
                 <input type="number" max="10" min="1" value=1 id="person" class="input input-bordered w-full max-w-xs" name="personCount">
                 <input type="hidden" name="packageID" value="<?php echo $packageInfo["PACKAGE_ID"] ?>">
+                <input type="hidden" name="packageName" value="<?php echo $packageInfo["PACKAGE_NAME"] ?>">
+                <input type="hidden" name="transportationCost" value="<?php echo $packageInfo["TRANSPORTATION_COST"] ?>">
+                <input type="hidden" name="entryFee" value="<?php echo $packageInfo["ENTRY_FEE"] ?>">
+                <input type="hidden" name="stayCost" value="<?php echo $packageInfo["STAY_COST"] ?>">
+                <input type="hidden" name="foodCost" value="<?php echo $packageInfo["FOOD_COST"] ?>">
             </div>
             <!-- Person Count End -->
 

@@ -34,7 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $personCount = $_POST["personCount"];
     $startDate = $_POST["startDate"];
     $packageID = $_POST["packageID"];
+    $packageName = $_POST["packageName"];
     $userID = $_SESSION["user_id"];
+    $transportationCost = $_POST["transportationCost"] * $personCount;
+    $entryFee = $_POST["entryFee"] * $personCount;
+    $stayCost = $_POST["stayCost"] * $personCount;
+    $foodCost = $_POST["foodCost"] * $personCount;
 
     if (isset($_SESSION) && $_SESSION["user_role"] !== "ADMIN") {
         try {
@@ -57,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                 die();
             }
 
-            purchasePackage($pdo, $packageID, $userID, $personCount, $startDate);
+            purchasePackage($pdo, $packageID, $packageName, $userID, $personCount, $startDate, $transportationCost, $entryFee, $stayCost, $foodCost);
             header("Location: ../tourPackage.php?purchase=Success");
             die();
 

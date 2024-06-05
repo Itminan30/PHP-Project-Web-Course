@@ -53,7 +53,12 @@
                             </li>
                             <li>
                                 <a class="justify-between" href="./myBlogs.php">
-                                    Profile
+                                    My Blogs
+                                </a>
+                            </li>
+                            <li>
+                                <a class="justify-between" href="./purchaseList.php">
+                                    My Purchases
                                 </a>
                             </li>
                             <li>
