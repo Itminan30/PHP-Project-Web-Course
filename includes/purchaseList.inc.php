@@ -5,7 +5,7 @@ function farr($arr)
     print_r($arr);
     echo "</pre>";
 }
-farr($_SESSION);
+// farr($_SESSION);
 if (isset($_SESSION["user_id"]) && $_SESSION["user_role"] === "USER") {
     $userID = $_SESSION["user_id"];
     $purchases = [];
@@ -16,7 +16,7 @@ if (isset($_SESSION["user_id"]) && $_SESSION["user_role"] === "USER") {
         require_once "purchaseList_mvc/purchaseList_contr.inc.php";
 
         $purchases = getPurchaseList($pdo, $userID);
-        farr($purchases);
+        // farr($purchases);
     } catch (PDOException $e) {
         die("Query Failed: " . $e->getMessage());
     }
