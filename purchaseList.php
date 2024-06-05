@@ -64,9 +64,15 @@ require "common/header.php";
                             <?php if ($purchase["STATUS"] === "PENDING") : ?>
                                 <td class="bg-gray-500 text-white"><?php echo $purchase["STATUS"] ?></td>
                             <?php elseif ($purchase["STATUS"] === "APPROVED") : ?>
-                                <td class="bg-green-500 "><?php echo $purchase["STATUS"] ?></td>
+                                <td class="bg-green-500 text-white">
+                                    <?php echo $purchase["STATUS"] ?> <br>
+                                    
+                                        <a href="includes/createPDF.inc.php?id=<?php echo $purchase["PURCHASE_ID"]?>">
+                                            Download Invoice
+                                        </a>
+                                </td>
                             <?php elseif ($purchase["STATUS"] === "DENIED") : ?>
-                                <td class="bg-red-500 "><?php echo $purchase["STATUS"] ?></td>
+                                <td class="bg-red-500 text-white"><?php echo $purchase["STATUS"] ?></td>
                             <?php endif ?>
                         </tr>
                     <?php endforeach ?>
