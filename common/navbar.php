@@ -33,6 +33,11 @@
                                 </a>
                             </li>
                             <li>
+                                <a class="justify-between" href="./approvePurchase.php">
+                                    Purchase Approval
+                                </a>
+                            </li>
+                            <li>
                                 <a href="./includes/logout.inc.php">Logout</a>
                             </li>
                         </ul>

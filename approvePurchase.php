@@ -22,10 +22,10 @@ require "common/header.php";
 <!-- Nav Section End -->
 
 <!-- Require INC file -->
-<?php require "includes/purchaseList.inc.php" ?>
+<?php require "includes/approvePurchase.inc.php" ?>
 <!--  -->
 
-<!-- Main Section Start -->
+<!-- Main Start -->
 <main>
     <div>
         <h1 class="text-3xl font-bold text-center">
@@ -41,11 +41,10 @@ require "common/header.php";
                         <th>Package Name</th>
                         <th>People</th>
                         <th>Date</th>
-                        <th>Transportation Cost</th>
-                        <th>Entry Fee</th>
-                        <th>Stay Cost</th>
-                        <th>Food Cost</th>
+                        <th>User ID</th>
                         <th>Total Cost</th>
+                        <th>Approve Purchase</th>
+                        <th>Deny Purchase</th>
                         <th>Status</th>
                     </tr>
                 </thead>
@@ -56,18 +55,19 @@ require "common/header.php";
                             <td><?php echo $purchase["PACKAGE_NAME"] ?></td>
                             <td><?php echo $purchase["PEOPLE_COUNT"] ?></td>
                             <td><?php echo $purchase["START_DATE"] ?></td>
-                            <td><?php echo $purchase["TRANSPORTATION_COST"] ?></td>
-                            <td><?php echo $purchase["ENTRY_FEE"] ?></td>
-                            <td><?php echo $purchase["STAY_COST"] ?></td>
-                            <td><?php echo $purchase["FOOD_COST"] ?></td>
+                            <td><?php echo $purchase["USER_ID"] ?></td>
                             <td><?php echo $purchase["TOTAL_COST"] ?></td>
-                            <?php if ($purchase["STATUS"] === "PENDING") : ?>
-                                <td class="bg-gray-500 text-white"><?php echo $purchase["STATUS"] ?></td>
-                            <?php elseif ($purchase["STATUS"] === "APPROVED") : ?>
-                                <td class="bg-green-500 "><?php echo $purchase["STATUS"] ?></td>
-                            <?php elseif ($purchase["STATUS"] === "DENIED") : ?>
-                                <td class="bg-red-500 "><?php echo $purchase["STATUS"] ?></td>
-                            <?php endif ?>
+                            <td>
+                                <a href="includes/approvePurchase_mvc/approve.inc.php?id=<?php echo $purchase["PURCHASE_ID"] ?>">
+                                    <button class="btn btn-success">Approve</button>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="includes/approvePurchase_mvc/deny.inc.php?id=<?php echo $purchase["PURCHASE_ID"] ?>">
+                                    <button class="btn btn-error">Deny</button>
+                                </a>
+                            </td>
+                            <td class="bg-gray-500 text-white"><?php echo $purchase["STATUS"] ?></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
@@ -75,7 +75,7 @@ require "common/header.php";
         </div>
     </div>
 </main>
-<!-- Main Section End -->
+<!-- Main End -->
 
 <!-- Footer Section Start -->
 <?php
