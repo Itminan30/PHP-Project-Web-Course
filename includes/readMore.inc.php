@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             die("Query Failed: " . $e->getMessage());
         }
     } else {
-        header("Location: ./index.php");
+        header("Location: ../index.php");
         die();
     }
 }

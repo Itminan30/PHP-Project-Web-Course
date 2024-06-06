@@ -65,52 +65,11 @@ require "common/header.php";
     <h2 class="russo-one-regular">Get Ready to Explore <span style="color: rgb(230, 37, 37);"> Dhaka </span><br> with <br>
       GULLIVER’S TRAVELS</h2> <br>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit perferendis exercitationem, nulla alias suscipit eveniet porro quaerat amet molestiae repudiandae sunt minima nemo voluptate distinctio architecto corporis ipsa quibusdam quasi.
+    Travel is a profound journey that extends beyond mere physical movement from one place to another; it is an immersive experience that enriches the soul and broadens the mind. Whether exploring the bustling streets of a vibrant city, soaking in the serene beauty of untouched nature, or delving into the rich history and culture of a distant land, travel offers a unique opportunity for personal growth and discovery. It challenges our perceptions, fosters a deeper understanding of diverse cultures, and creates lasting memories that shape our worldview. In the ever-changing tapestry of life, travel remains a constant source of inspiration, adventure, and learning, reminding us of the boundless possibilities that await beyond our familiar horizons.
     </p>
     <br>
 
-    <p class="roboto-medium mt-20" style="text-align: right;">
-      Wide range of travel options <br>
-      Affordable prices <br>
-      Personalized travel planning <br>
-      24/7 support
-    </p>
   </div>
-  <!-- Inside Slider End -->
-
-  <!-- Customized Services End -->
-  <div class="cusomized-services">
-    <h1 style=" padding-bottom: 20px; text-align: center; font-size: x-large; color:rgb(229, 14, 14); font-weight: bold;">
-      Our customized services
-    </h1>
-    <div class="services">
-      <!--card 1-->
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img src="images/guided_tour.jpg" alt="Shoes" class="rounded-xl" />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Guided Tours</h2>
-          <div class="card-actions">
-            <button class="btn btn-primary">Details</button>
-          </div>
-        </div>
-      </div>
-      <!--Card 2-->
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
-          <img src="images/hotel_booking.jpg" alt="Shoes" class="rounded-xl" />
-        </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">Tour Packages</h2>
-          <div class="card-actions">
-            <button class="btn btn-primary"><a href="./tourPackage.php">Details</a></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Customized Services End -->
 
   <!-- Explore Top Destinations Start -->
   <div class="Explore-top-destinations">

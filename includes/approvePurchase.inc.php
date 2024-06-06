@@ -15,7 +15,7 @@ if (isset($_SESSION["user_role"])) {
             require_once "approvePurchase_mvc/approvePurchase_contr.inc.php";
             
             $purchases = getPurchases($pdo);
-            farr($purchases);
+            // farr($purchases);
         } catch (PDOException $e) {
             die("Query Failed: " . $e->getMessage());
         }

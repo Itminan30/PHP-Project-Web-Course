@@ -10,7 +10,6 @@
             <a class="roboto-medium" href="./index.php">Home</a>
             <a class="roboto-medium" href="./tourPackage.php">Packages</a>
             <a class="roboto-medium" href="./blogPage.php">Blog</a>
-            <a class="roboto-medium" href=" ">About</a>
             <a class="roboto-medium" href="./contact.php">Contact</a>
             <?php if (isset($_SESSION["user_email"])) : ?>
                 <?php if ($_SESSION["user_role"] === "ADMIN") : ?>
