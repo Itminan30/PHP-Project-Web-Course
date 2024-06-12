@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
             if ($errors) {
                 $_SESSION["readMore_error"] = $errors;
-                farr($errors);
+                // farr($errors);
                 header("Location: ../readMore.php?package={$packageID}");
                 die();
             }

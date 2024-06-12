@@ -1,0 +1,217 @@
+CREATE TABLE USERS (
+    ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    ROLE VARCHAR(20) NOT NULL DEFAULT 'USER',
+    USER_NAME VARCHAR(50) NOT NULL,
+    EMAIL VARCHAR(320) NOT NULL,
+    USER_PASSWORD VARCHAR(255) NOT NULL,
+    CREATED_AT DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    PHONE_NUMBER VARCHAR(30) NOT NULL,
+    ADDRESS VARCHAR(255) NOT NULL,
+    DOB DATE NOT NULL DEFAULT CURRENT_DATE,
+    PHOTO_URL VARCHAR(65535) NOT NULL,
+    PHOTO_ID VARCHAR(10000) NOT NULL DEFAULT 'ID',
+    PRIMARY KEY(ID, EMAIL)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE TABLE BLOGS (
+    BLOG_ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    WRITER_ID INT(11) UNSIGNED NOT NULL,
+    PLACE_NAME VARCHAR(1000) NOT NULL,
+    PLACE_LOCATION VARCHAR(65535) NOT NULL,
+    BLOG_TITLE VARCHAR(1000) NOT NULL,
+    BLOG_BODY TEXT NOT NULL,
+    MAIN_PHOTO_URL VARCHAR(65535) NOT NULL,
+    MAIN_PHOTO_ID VARCHAR(10000) NOT NULL DEFAULT 'ID',
+    WRITING_TIME DATETIME NOT NULL DEFAULT CURRENT_TIME,
+    APPROVAL VARCHAR(10) NOT NULL DEFAULT 'PENDING',
+    PRIMARY KEY (BLOG_ID),
+    FOREIGN KEY (WRITER_ID) REFERENCES USERS (ID) ON DELETE CASCADE
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO USERS (USER_NAME, EMAIL, USER_PASSWORD, PHONE_NUMBER, ADDRESS, DOB, PHOTO_URL, PHOTO_ID) VALUES (
+    'Itminan',
+    'itminan30@gmail.com',
+    'asdfasdfF1!',
+    '+8801517846033',
+    'House No: 273, Road No: 5, Mohammadia Housing Society, Mohammadpur, Dhaka-1207',
+    2001-07-30,
+    'https://images.unsplash.com/photo-1560787313-5dff3307e257?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'adsfasdf'
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Jamil URL
+https://images.unsplash.com/photo-1593351799227-75df2026356b?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Samia URL
+https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwaHVtYW58ZW58MHx8MHx8fDA%3D
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Prity URL
+https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fGJsYWNrJTIwaHVtYW58ZW58MHx8MHx8fDA%3D
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO blogs (WRITER_ID, PLACE_NAME, PLACE_LOCATION, BLOG_TITLE, BLOG_BODY, MAIN_PHOTO_URL) VALUES (
+    '2',
+    'Dhaka',
+    'https://maps.app.goo.gl/11p4miEPcErQaNPU7',
+    'Smoking in the public places of Dhaka city: An analysis of the current situation',
+    'Dhaka is one of the densely populated and largest metropolitan cities in the world. Along with having so many problems, city dwellers here have been facing a serious problem regarding reckless smoking habits in the public places. Understanding the intensity of smoking everywhere, the Government of Bangladesh introduced an Act to restrict the smoking in the public places. The study has been carried out using both qualitative and quantitative research method. To collect primary data, interviewer assisted surveys were taken whereas secondary data has been collected from different resources. The situation was supposed to be in control whereas the reality is a different one. People still in the city smoke recklessly everywhere even after being educated and concerned about the banning of smoking in the public places. This has been occurring continuously due to no punishment for smoking in public places; no government provided smoking zone and availability of smoking materials everywhere. Thus it seems to be a pure policy failure. The government must focus more on this issue immediately as smoking is harmful not only for the smokers but also for the nonsmokers too. Strict punishment should practically be given to those who smoke in the public places. Besides, smoking zones should be established in different points of the city and the selling of smoking materials must be controlled.
+',
+    'https://images.unsplash.com/photo-1555441293-6c6fb1eb9773?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Blog Title:
+Smoking in the public places of Dhaka city: An analysis of the current situation
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Blog Body:
+Dhaka is one of the densely populated and largest metropolitan cities in the world. Along with having so many problems, city dwellers here have been facing a serious problem regarding reckless smoking habits in the public places. Understanding the intensity of smoking everywhere, the Government of Bangladesh introduced an Act to restrict the smoking in the public places. The study has been carried out using both qualitative and quantitative research method. To collect primary data, interviewer assisted surveys were taken whereas secondary data has been collected from different resources. The situation was supposed to be in control whereas the reality is a different one. People still in the city smoke recklessly everywhere even after being educated and concerned about the banning of smoking in the public places. This has been occurring continuously due to no punishment for smoking in public places; no government provided smoking zone and availability of smoking materials everywhere. Thus it seems to be a pure policy failure. The government must focus more on this issue immediately as smoking is harmful not only for the smokers but also for the nonsmokers too. Strict punishment should practically be given to those who smoke in the public places. Besides, smoking zones should be established in different points of the city and the selling of smoking materials must be controlled.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Blog Image:
+https://images.unsplash.com/photo-1555441293-6c6fb1eb9773?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Blog Map:
+https://maps.app.goo.gl/11p4miEPcErQaNPU7
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$query = "INSERT INTO USERS (USER_NAME, EMAIL, USER_PASSWORD, PHONE_NUMBER, ADDRESS, DOB, PHOTO_URL, PHOTO_ID) VALUES (:username, :email, :password, :phone, :address, :dob, :url, :publicId );";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$query = "SELECT EMAIL FROM USERS WHERE EMAIL = :email;";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE TABLE PACKAGE_TABLE (
+    PACKAGE_ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    PACKAGE_NAME VARCHAR(50) NOT NULL,
+    TRANSPORTATION_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    ENTRY_FEE INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    STAY_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    FOOD_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    TOTAL_COST INT(11) AS (ENTRY_FEE+STAY_COST+FOOD_COST+TRANSPORTATION_COST),
+    TRANSPORTATION_NAME VARCHAR(50) NOT NULL DEFAULT "walking",
+    TOUR_DURATION INT(3) UNSIGNED NOT NULL DEFAULT 1,
+    RESIDENCE VARCHAR(50) NOT NULL,
+    PACKAGE_IMAGE VARCHAR(65535) NOT NULL,
+    PACKAGE_IMAGE_ID VARCHAR(10000) NOT NULL DEFAULT "ID",
+    PRIMARY KEY(PACKAGE_ID, PACKAGE_NAME)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE TABLE PACKAGE_PLACES (
+	PLACE_ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    PACKAGE_ID INT(11) UNSIGNED NOT NULL,
+    PLACE_NAME VARCHAR(100) NOT NULL,
+    PREVIOUS_PLACE VARCHAR(100) NOT NULL DEFAULT "start",
+    ENTRY_COST INT(11) NOT NULL DEFAULT 0,
+    PRIMARY KEY(PLACE_ID),
+    FOREIGN KEY(PACKAGE_ID) REFERENCES PACKAGE_TABLE(PACKAGE_ID) ON DELETE CASCADE
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE TABLE FOOD_TABLE(
+    FOOD_ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    PACKAGE_ID INT(11) UNSIGNED NOT NULL,
+    FOOD_NAME VARCHAR(100) NOT NULL,
+    FOOD_TYPE VARCHAR(100) NOT NULL,
+    FOOD_COST INT(11) UNSIGNED NOT NULL,
+    PRIMARY KEY(FOOD_ID),
+    FOREIGN KEY(PACKAGE_ID) REFERENCES PACKAGE_TABLE(PACKAGE_ID) ON DELETE CASCADE
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CREATE TABLE PURCHASE_INFO (
+    PURCHASE_ID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    PACKAGE_ID INT(11) UNSIGNED NOT NULL,
+    PACKAGE_NAME VARCHAR(50) NOT NULL,
+    USER_ID INT(11) UNSIGNED NOT NULL,
+    PEOPLE_COUNT INT(3) UNSIGNED NOT NULL DEFAULT 1,
+    START_DATE DATE NOT NULL,
+    TRANSPORTATION_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    ENTRY_FEE INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    STAY_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    FOOD_COST INT(11) UNSIGNED NOT NULL DEFAULT 0,
+    TOTAL_COST INT(11) AS (ENTRY_FEE+STAY_COST+FOOD_COST+TRANSPORTATION_COST),
+    STATUS VARCHAR(30) NOT NULL DEFAULT "PENDING",
+    PRIMARY KEY(PURCHASE_ID),
+    FOREIGN KEY(PACKAGE_ID) REFERENCES PACKAGE_INFO(PACKAGE_ID) ON DELETE CASCADE,
+    FOREIGN KEY(USER_ID) REFERENCES USERS(ID) ON DELETE CASCADE
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO PACKAGE_INFO (
+	PACKAGE_NAME,
+    TRANSPORTATION_COST,
+    ENTRY_FEE,
+    STAY_COST,
+    FOOD_COST,
+    TRANSPORTATION_NAME,
+    TOUR_DURATION,
+    RESIDENCE,
+    PACKAGE_IMAGE,
+    PACKAGE_IMAGE_ID
+) VALUES (
+	"Minimal Trip",
+    50,
+    0,
+    0,
+    150,
+    "Local Bus",
+    2,
+    "Local Mosques",
+    "https://res.cloudinary.com/dzpf6ktfk/image/upload/v1717508540/rjecahmupr0gb0crdqzt.jpg",
+    "rjecahmupr0gb0crdqzt"
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO PACKAGE_INFO (
+	PACKAGE_NAME,
+    TRANSPORTATION_COST,
+    ENTRY_FEE,
+    STAY_COST,
+    FOOD_COST,
+    TRANSPORTATION_NAME,
+    TOUR_DURATION,
+    RESIDENCE,
+    PACKAGE_IMAGE,
+    PACKAGE_IMAGE_ID
+) VALUES (
+	"Spiritual Spirit",
+    40,
+    0,
+    0,
+    300,
+    "Local Bus",
+    2,
+    "Local Mosques",
+    "https://res.cloudinary.com/dzpf6ktfk/image/upload/v1717508960/cnzdu6ycyfvtqykk8gha.jpg",
+    "cnzdu6ycyfvtqykk8gha"
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO PACKAGE_INFO ( PACKAGE_NAME, TRANSPORTATION_COST, ENTRY_FEE, STAY_COST, FOOD_COST, TRANSPORTATION_NAME, TOUR_DURATION, RESIDENCE, PACKAGE_IMAGE, PACKAGE_IMAGE_ID ) VALUES ( "Sneak Peak", 1000, 570, 4500, 3000, "Company Minibus", 3, "Hotel (Single Room)", "https://res.cloudinary.com/dzpf6ktfk/image/upload/v1717509120/aupsjnal82k57ysjcjri.jpg", "aupsjnal82k57ysjcjri" );
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO PACKAGE_INFO (
+	PACKAGE_NAME,
+    TRANSPORTATION_COST,
+    ENTRY_FEE,
+    STAY_COST,
+    FOOD_COST,
+    TRANSPORTATION_NAME,
+    TOUR_DURATION,
+    RESIDENCE,
+    PACKAGE_IMAGE,
+    PACKAGE_IMAGE_ID
+) VALUES (
+	"Tour of History",
+    1200,
+    900,
+    6000,
+    6000,
+    "Company Minibus",
+    4,
+    "Hotel (Single Room)",
+    "https://res.cloudinary.com/dzpf6ktfk/image/upload/v1717509307/q40l8wbwjl9k5y0lyhtt.jpg",
+    "q40l8wbwjl9k5y0lyhtt"
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INSERT INTO PACKAGE_PLACES (
+    PACKAGE_ID,
+	PLACE_NAME,
+    PREVIOUS_PLACE,
+    ENTRY_COST
+) VALUES (
+    1,
+	"Chandrima Udyan",
+    "NONE",
+    0
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
